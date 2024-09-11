@@ -12,7 +12,7 @@ config:
 
 hosts:
   'production':
-    branch: '0.x'
+    branch: 'main'
     hostname: '5.161.93.164'
     identity_file: ~/.ssh/id_forge
     deploy_path: '{{base_deploy_path}}/docker-for-laravel.com'
