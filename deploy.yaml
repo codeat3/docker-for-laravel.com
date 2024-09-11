@@ -29,7 +29,7 @@ tasks:
     - artisan:storage:link
     - artisan:optimize
     - artisan:down
-    - artisan:migrate
+    # - artisan:migrate
     - npm:install
     - npm:run:prod
     # - artisan:filament-publish
