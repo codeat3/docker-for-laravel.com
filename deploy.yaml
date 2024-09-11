@@ -1,0 +1,42 @@
+import:
+    - recipe/laravel.php
+    - contrib/npm.php
+    # - deploy/filament-publish.php
+
+config:
+  application: 'docker-for-laravel.com'
+  repository: 'git@github.com:codeat3/docker-for-laravel.com.git'
+  php_fpm_version: '8.2'
+  remote_user: forge
+  base_deploy_path: '/home/forge'
+
+hosts:
+  'production':
+    branch: '0.x'
+    hostname: '5.161.93.164'
+    identity_file: ~/.ssh/id_forge
+    deploy_path: '{{base_deploy_path}}/docker-for-laravel.com'
+  'staging':
+    branch: 'staging'
+    hostname: '5.161.93.164'
+    identity_file: ~/.ssh/id_forge
+    deploy_path: '{{base_deploy_path}}/staging.docker-for-laravel.com'
+
+tasks:
+  deploy:
+    - deploy:prepare
+    - deploy:vendors
+    - artisan:storage:link
+    - artisan:optimize
+    - artisan:down
+    - artisan:migrate
+    - npm:install
+    - npm:run:prod
+    # - artisan:filament-publish
+    - artisan:up
+    - deploy:publish
+  npm:run:prod:
+      - run: 'cd {{release_path}} && npm run build'
+
+after:
+  deploy:failed: deploy:unlock
