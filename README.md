@@ -25,4 +25,15 @@ The following tools are required in order to start the installation.
 You can now visit the app in your browser by visiting http://127.0.0.1:8000.
 
 ### Contribution
-If you have any good resources which can help a laravel developer get the dockerized setup on production. Create a PR and add the resources to `app/Models/DockerResource.php`
+If you have any good resources which can help a laravel developer get the dockerized setup on production. Create a PR and add the resource to `app/Models/DockerResource.php`.
+
+The format of the resource should be as follows
+```php
+[
+    'id' => 4,
+    'author' => 'Author Name',
+    'social_handle' =>  'social handle link',
+    'title' => 'title of the resource',
+    'link' => 'link of the resource'
+],
+```
