@@ -4,7 +4,12 @@
 @endphp
 <li class="flex items-center justify-between gap-x-6 py-5">
     <div class="flex min-w-0 gap-x-4">
-        <x-buk-avatar class="h-12 w-12 flex-none rounded-full bg-gray-50" search="{{ $handle }}" />
+        @if(!empty($handle))
+            <x-buk-avatar class="h-12 w-12 flex-none rounded-full bg-gray-50" search="{{ $handle }}" />
+        @else
+            <img class="h-12 w-12 flex-none rounded-full bg-gray-50" alt="{{ $resource->author }}" alt="{{ $resource->author }}" src="{{ Avatar::create($resource->author)->toBase64() }}">
+        @endif
+
         <div class="min-w-0 flex-auto">
             <p class="text-sm font-semibold leading-6 text-gray-900">{{ $resource->author }}
                 <span class="font-normal">

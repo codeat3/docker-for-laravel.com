@@ -1,0 +1,20 @@
+[
+    {
+        "id" : 1,
+        "social_handle" :  "https://x.com/fideloper",
+        "title" : "serversforhackers",
+        "link" : "https://serversforhackers.com/"
+    },
+    {
+        "id" : 2,
+        "social_handle" :  "https://x.com/jaydrogers",
+        "title" : "serversideup",
+        "link" : "https://serversideup.net/open-source/docker-php/"
+    },
+    {
+        "id" : 3,
+        "social_handle" :  "https://x.com/aschmelyun",
+        "title" : "laraveldocker.com",
+        "link" : "https://laraveldocker.com/"
+    }
+]

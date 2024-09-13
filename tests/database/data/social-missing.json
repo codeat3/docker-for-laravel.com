@@ -1,0 +1,20 @@
+[
+    {
+        "id" : 1,
+        "author" : "Chris Fidao",
+        "title" : "serversforhackers",
+        "link" : "https://serversforhackers.com/"
+    },
+    {
+        "id" : 2,
+        "author" : "Jay Rogers",
+        "title" : "serversideup",
+        "link" : "https://serversideup.net/open-source/docker-php/"
+    },
+    {
+        "id" : 3,
+        "author" : "Andrew Schmelyun",
+        "title" : "laraveldocker.com",
+        "link" : "https://laraveldocker.com/"
+    }
+]
